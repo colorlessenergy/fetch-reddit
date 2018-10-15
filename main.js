@@ -10,6 +10,10 @@ form.addEventListener('submit', function (event) {
   // actually submitting
   event.preventDefault();
 
+  // add class to the form
+  // to move it to top after searching
+  form.classList.add('form--searched');
+
   // clear all the post after every search
   post.innerHTML = "";
 
