@@ -1,6 +1,11 @@
 // get the form and input from the HTML
 let form = document.querySelector('.form');
 let input = document.querySelector('input');
+// get the container to populate
+// data with. Has to be a global variable
+// because we are going to be using this in more
+// then one spot
+let posts = document.querySelector('#posts');
 
 
 // have javascript listen to the submit event listener on the form
@@ -15,7 +20,7 @@ form.addEventListener('submit', function (event) {
   form.classList.add('form--searched');
 
   // clear all the post after every search
-  post.innerHTML = "";
+  posts.innerHTML = "";
 
   // checking if the input value
   // isn't empty
@@ -83,11 +88,6 @@ function dataToDom(arr) {
     data = [];
   });
 }
-
-// get the container to populate
-// data with. Has to be a global variable
-// because we are going to be using this somewhere else
-let post = document.querySelector('#post');
 
 function createElementsAndAppendElements(arr, url) {
   // have the a tag be the container, so the whole content
