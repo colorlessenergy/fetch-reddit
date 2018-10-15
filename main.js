@@ -1,3 +1,28 @@
+// get the form and input from the HTML
+let form = document.querySelector('.form');
+let input = document.querySelector('input');
+
+
+// have javascript listen to the submit event listener on the form
+form.addEventListener('submit', function (event) {
+
+  // this will stop the form from
+  // actually submitting
+  event.preventDefault();
+
+  // clear all the post after every search
+  post.innerHTML = "";
+
+  // checking if the input value
+  // isn't empty
+  if (input.value) {
+    search(input.value);
+  }
+
+  // reset the input field
+  input.value = "";
+});
+
 // pass in a string of the subreddit
 function search(subreddit) {
   // concat the subreddit with the url
