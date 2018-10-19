@@ -66,9 +66,9 @@ function dataToDom(arr) {
     });
 
     // if an image exist
-    if (obj.data.preview) {
+    if (obj.data.url.includes('jpg')) {
       data.push({
-        data: obj.data.preview.images[0].source.url,
+        data: obj.data.url,
         element: 'img'
       });
     } else {
