@@ -1,0 +1,83 @@
+body, html {
+  margin: 0;
+  height: 100%;
+}
+
+button {
+  background-color: #26a69a;
+  border: none;
+  color: #fff;
+  outline: none;
+  height: 36px;
+  font-size: 15px;
+  letter-spacing: .5px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: all .3s ease-out;
+}
+
+button:hover {
+  background-color: #2bbbad;
+}
+
+input {
+  color: rgba(0, 0, 0, 0.8);
+  border: 1px solid #b9b9b9;
+  padding: 0px 8px;
+  font-size: 15px;
+  border-radius: 2px;
+  height: 36px;
+  outline: none;
+}
+
+.form {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form--searched {
+  height: initial;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.title {
+  font-size: 30px;
+  margin: 30px 10px;
+}
+
+#posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  /* center it on bigger screens */
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+#posts img {
+  width: 100%;
+}
+
+#posts a {
+  display: block;
+  margin: 50px 0;
+  width: 26%;
+}
+
+@media screen and (max-width: 961px) {
+  .form {
+    flex-direction: column;
+  }
+
+  #posts a {
+    width: 90%;
+  }
+}
